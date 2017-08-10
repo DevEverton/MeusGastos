@@ -19,12 +19,12 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     @IBOutlet weak var numbersViewBottomConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var numbersViewLabel: UILabel!
-    var numbersViewString = ""
+
     
     var incomeButtonLocation: CGPoint!
     var expenseButtonLocation: CGPoint!
   
-    let categories = Categories()
+    var myExpenses = Expenses()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,7 +33,8 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         
         tableView.layer.cornerRadius = 10
         numbersView.alpha = 0
-        tableView.layer.cornerRadius = 10
+        numbersViewLabel.text = "0,000"
+      
         
     }
     
@@ -44,12 +45,12 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.categoriesArray.count
+        return myExpenses.categoriesArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categories", for: indexPath) as! CategoryCollectionViewCell
-        collectCell.categoryLabel.text = categories.categoriesArray[indexPath.row]
+        collectCell.categoryLabel.text = myExpenses.categoriesArray[indexPath.row]
         
         return collectCell
     }
@@ -123,12 +124,13 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     
     @IBAction func insertNumber(_ sender: Any) {
         
-        numbersViewString += (sender as AnyObject).title(for: .normal)!
+
         
-        //let formattedString = numbersViewString as! NSMutableString
-       // formattedString.insert(",", at: 0)
+      //myExpenses.valueOnTheScreen += (sender as AnyObject).title(for: .normal)!
+      // myExpenses.valueOnTheScreen.remove(at: myExpenses.valueOnTheScreen.startIndex)
+      // numbersViewLabel.text =  myExpenses.valueOnTheScreen
         
-        numbersViewLabel.text = numbersViewString
+
         
     }
     
