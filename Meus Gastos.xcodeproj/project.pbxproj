@@ -18,6 +18,7 @@
 		501D26031F3521DB007397B5 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501D26021F3521DB007397B5 /* CategoryCollectionViewCell.swift */; };
 		501D26051F38C6FB007397B5 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501D26041F38C6FB007397B5 /* Expenses.swift */; };
 		501D26071F3A23A3007397B5 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501D26061F3A23A3007397B5 /* Categories.swift */; };
+		50AD78F51F3E58D800E85A87 /* DescribeExpenseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD78F41F3E58D800E85A87 /* DescribeExpenseVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		501D26021F3521DB007397B5 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		501D26041F38C6FB007397B5 /* Expenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		501D26061F3A23A3007397B5 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		50AD78F41F3E58D800E85A87 /* DescribeExpenseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescribeExpenseVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				501D25DE1F2FA636007397B5 /* AppDelegate.swift */,
 				501D25F61F2FA71D007397B5 /* MainVC.swift */,
 				501D26021F3521DB007397B5 /* CategoryCollectionViewCell.swift */,
+				50AD78F41F3E58D800E85A87 /* DescribeExpenseVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50AD78F51F3E58D800E85A87 /* DescribeExpenseVC.swift in Sources */,
 				501D25E71F2FA636007397B5 /* Meus_Gastos.xcdatamodeld in Sources */,
 				501D26071F3A23A3007397B5 /* Categories.swift in Sources */,
 				501D26051F38C6FB007397B5 /* Expenses.swift in Sources */,

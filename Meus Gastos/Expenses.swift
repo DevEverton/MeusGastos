@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+import UIKit
 
 struct Expenses {
     
@@ -22,17 +22,8 @@ struct Expenses {
     var valueVestuário = Double()
     var valueOutros = Double()
     
-    let categoriesArray =
-    [
-            "Alimentação",
-            "Lazer",
-            "Transporte",
-            "Moradia",
-            "Saúde",
-            "Educação" ,
-            "Vestuário",
-            "Outros"
-    ]
+
+    let categoryArray = [UIImage(named: "Alimentacao"), UIImage(named: "Lazer"), UIImage(named: "Transporte"), UIImage(named: "Moradia"), UIImage(named: "Saude"), UIImage(named: "Educacao"), UIImage(named: "Vestuario"), UIImage(named: "Outros"), ]
 
     mutating func addExpense(newExpense: Double, category: Categories){
         
@@ -53,8 +44,7 @@ struct Expenses {
             valueVestuário += newExpense
         case .Outros:
             valueOutros += newExpense
-        default:
-            break
+
         }
         
     }

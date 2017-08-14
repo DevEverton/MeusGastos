@@ -25,15 +25,19 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     var expenseButtonLocation: CGPoint!
   
     var myExpenses = Expenses()
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         incomeButtonLocation = incomeButton.center
         expenseButtonLocation = expenseButton.center
         
-        tableView.layer.cornerRadius = 10
+        tableView.layer.cornerRadius = 8
         numbersView.alpha = 0
         numbersViewLabel.text = "0,000"
+        
+        
       
         
     }
@@ -45,12 +49,14 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myExpenses.categoriesArray.count
+        return myExpenses.categoryArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categories", for: indexPath) as! CategoryCollectionViewCell
-        collectCell.categoryLabel.text = myExpenses.categoriesArray[indexPath.row]
+        //collectCell.categoryLabel.text = myExpenses.categoriesArray[indexPath.row]
+        collectCell.categoryIcon.image = myExpenses.categoryArray[indexPath.row]
+        
         
         return collectCell
     }
@@ -98,6 +104,8 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         UIView.animate(withDuration: 0.5, animations: {
             self.numbersView.alpha = 0
         })
+        
+        performSegue(withIdentifier: "describeExpense", sender: (Any).self)
     }
     
     @IBAction func expenseButtonAct(_ sender: Any) {
@@ -134,6 +142,7 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         
     }
     
+   
     
     
     
