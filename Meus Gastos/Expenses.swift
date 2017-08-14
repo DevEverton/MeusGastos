@@ -9,23 +9,94 @@
 import Foundation
 import UIKit
 
-struct Expenses {
+class Expenses {
     
     
-    var valueOnTheScreen = String()
-    var valueAlimentação = Double()
-    var valueLazer = Double()
-    var valueMoradia = Double()
-    var valueSaúde = Double()
-    var valueTransporte = Double()
-    var valueEducação = Double()
-    var valueVestuário = Double()
-    var valueOutros = Double()
+    private var _valueOnTheScreen = Double()
+    private var _valueAlimentação = Double()
+    private var _valueLazer = Double()
+    private var _valueMoradia = Double()
+    private var _valueSaúde = Double()
+    private var _valueTransporte = Double()
+    private var _valueEducação = Double()
+    private var _valueVestuário = Double()
+    private var _valueOutros = Double()
+    
+    var valueOntheScreen: Double {
+        get{
+            return _valueOnTheScreen
+        }set{
+            _valueOnTheScreen = newValue
+        }
+    }
+    
+    var valueAlimentação: Double {
+        get{
+            return _valueAlimentação
+        }set{
+            _valueAlimentação = newValue
+        }
+    }
+    
+    var valueLazer: Double {
+        get{
+            return _valueLazer
+        }set{
+            _valueLazer = newValue
+        }
+    }
+    
+    var valueMoradia: Double {
+        get{
+            return _valueMoradia
+        }set{
+            _valueMoradia = newValue
+        }
+    }
+    
+    var valueSaúde: Double {
+        get{
+            return _valueSaúde
+        }set{
+            _valueSaúde = newValue
+        }
+    }
+    
+    var valueTransporte: Double {
+        get{
+            return _valueTransporte
+        }set{
+            _valueTransporte = newValue
+        }
+    }
+    
+    var valueEducação: Double {
+        get{
+            return _valueEducação
+        }set{
+            _valueEducação = newValue
+        }
+    }
+    
+    var valueVestuário: Double {
+        get{
+            return _valueVestuário
+        }set{
+            _valueVestuário = newValue
+        }
+    }
+    
+    var valueOutros: Double {
+        get{
+            return _valueOutros
+        }set{
+            _valueOutros = newValue
+        }
+    }
     
 
-    let categoryArray = [UIImage(named: "Alimentacao"), UIImage(named: "Lazer"), UIImage(named: "Transporte"), UIImage(named: "Moradia"), UIImage(named: "Saude"), UIImage(named: "Educacao"), UIImage(named: "Vestuario"), UIImage(named: "Outros"), ]
-
-    mutating func addExpense(newExpense: Double, category: Categories){
+    
+    func addExpense(newExpense: Double, category: Categories){
         
         switch category {
         case .Alimentação:
@@ -44,10 +115,11 @@ struct Expenses {
             valueVestuário += newExpense
         case .Outros:
             valueOutros += newExpense
-
+            
         }
         
     }
+    
     
 }
 

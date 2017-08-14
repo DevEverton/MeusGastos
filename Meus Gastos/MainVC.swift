@@ -17,14 +17,13 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     @IBOutlet weak var numbersView: RoundedView!
     @IBOutlet weak var enterValueButtonOutlet: RoundedButton!
     @IBOutlet weak var numbersViewBottomConstraint: NSLayoutConstraint!
-    
     @IBOutlet weak var numbersViewLabel: UILabel!
 
     
     var incomeButtonLocation: CGPoint!
     var expenseButtonLocation: CGPoint!
   
-    var myExpenses = Expenses()
+    var myExpenses = MonthExpenses()
     
     
 
@@ -49,13 +48,13 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myExpenses.categoryArray.count
+        return Constants.categoryArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let collectCell = collectionView.dequeueReusableCell(withReuseIdentifier: "categories", for: indexPath) as! CategoryCollectionViewCell
         //collectCell.categoryLabel.text = myExpenses.categoriesArray[indexPath.row]
-        collectCell.categoryIcon.image = myExpenses.categoryArray[indexPath.row]
+        collectCell.categoryIcon.image = Constants.categoryArray[indexPath.row]
         
         
         return collectCell
