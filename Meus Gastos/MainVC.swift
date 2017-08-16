@@ -32,7 +32,7 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         incomeButtonLocation = incomeButton.center
         expenseButtonLocation = expenseButton.center
         
-        tableView.layer.cornerRadius = 8
+        //tableView.layer.cornerRadius = 8
         numbersView.alpha = 0
         numbersViewLabel.text = "0,000"
         
