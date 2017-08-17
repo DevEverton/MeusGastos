@@ -34,11 +34,16 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         
         //tableView.layer.cornerRadius = 8
         numbersView.alpha = 0
-        numbersViewLabel.text = "0,000"
         
         
       
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        numbersViewLabel.text = "0,00"
+        Variables.typedValue = ""
+
     }
     
     override func viewDidLayoutSubviews() {
@@ -104,7 +109,9 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
             self.numbersView.alpha = 0
         })
         
+        if enterValueButtonOutlet.backgroundColor == UIColor(red:1.00, green:0.23, blue:0.19, alpha:1.0){
         performSegue(withIdentifier: "describeExpense", sender: (Any).self)
+        }
     }
     
     @IBAction func expenseButtonAct(_ sender: Any) {
@@ -131,7 +138,8 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     
     @IBAction func insertNumber(_ sender: Any) {
         
-
+        Variables.typedValue += (sender as AnyObject).title(for: .normal)!
+        numbersViewLabel.text = Variables.typedValue
         
       //myExpenses.valueOnTheScreen += (sender as AnyObject).title(for: .normal)!
       // myExpenses.valueOnTheScreen.remove(at: myExpenses.valueOnTheScreen.startIndex)

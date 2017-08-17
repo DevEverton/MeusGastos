@@ -12,7 +12,6 @@ import UIKit
 class Expenses {
     
     
-    private var _valueOnTheScreen = Double()
     private var _valueAlimentação = Double()
     private var _valueLazer = Double()
     private var _valueMoradia = Double()
@@ -22,13 +21,6 @@ class Expenses {
     private var _valueVestuário = Double()
     private var _valueOutros = Double()
     
-    var valueOntheScreen: Double {
-        get{
-            return _valueOnTheScreen
-        }set{
-            _valueOnTheScreen = newValue
-        }
-    }
     
     var valueAlimentação: Double {
         get{
