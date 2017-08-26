@@ -22,8 +22,7 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         categoryPicker.delegate = self
         categoryPicker.dataSource = self
         categoryTextFiled.inputView = categoryPicker
-        categoryPicker.backgroundColor = UIColor(red:0.40, green:0.40, blue:0.40, alpha:1.0)
-        
+        categoryPicker.backgroundColor = UIColor(red:0.21, green:0.14, blue:0.04, alpha:1.0)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -52,9 +51,5 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         self.view.endEditing(false)
     }
     
-
-
-
-
 
 }

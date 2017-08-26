@@ -30,7 +30,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="45"/>
                                 <state key="normal" title="+">
-                                    <color key="titleColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -40,7 +40,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -55,7 +55,7 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="50"/>
                                 <state key="normal" title="−">
-                                    <color key="titleColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -65,7 +65,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.99992352724075317" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -74,7 +74,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5qv-kA-nHo" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                 <rect key="frame" x="157.5" y="587" width="60" height="60"/>
-                                <color key="backgroundColor" red="0.38958227634429932" green="0.808552086353302" blue="0.42183780670166016" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.023788729682564735" green="0.17306500673294067" blue="0.41441088914871216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="HCE-mt-fPp"/>
                                     <constraint firstAttribute="width" constant="60" id="nqL-Zd-n6F"/>
@@ -87,7 +87,7 @@
                                         <real key="value" value="30"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="value" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -96,13 +96,13 @@
                             </button>
                             <tableView clipsSubviews="YES" alpha="0.59999999999999998" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HeX-CP-JTD">
                                 <rect key="frame" x="16" y="284" width="343" height="221"/>
-                                <color key="backgroundColor" red="0.14509803921568626" green="0.16078431372549018" blue="0.19607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.26927471160888672" green="0.18881383538246155" blue="0.044672504067420959" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="c0A-Wc-CaB">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="c0A-Wc-CaB" id="nCy-wy-Dwm">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -120,14 +120,14 @@
                                                     <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4J-Bc-MMi" userLabel="insertNumberView" customClass="RoundedView" customModule="Meus_Gastos" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="269" height="35"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrU-Mi-mky">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PrU-Mi-mky">
                                                                 <rect key="frame" x="35" y="0.5" width="226" height="34.5"/>
                                                                 <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
                                                                 <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.22869324684143066" green="0.16496789455413818" blue="0.061029009521007538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="PrU-Mi-mky" secondAttribute="bottom" id="RwG-RW-M4e"/>
                                                             <constraint firstAttribute="height" constant="35" id="fBa-1T-72x"/>
@@ -149,7 +149,7 @@
                                                                 <subviews>
                                                                     <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="54c-9w-MXi" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="46" height="45"/>
-                                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.16767436265945435" green="0.11433687061071396" blue="0.033651631325483322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="45" id="Msj-eV-MqL"/>
                                                                             <constraint firstAttribute="height" constant="45" id="vjy-rh-x2X"/>
@@ -169,7 +169,7 @@
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pMf-IW-pS4" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                                         <rect key="frame" x="56" y="0.0" width="45.5" height="45"/>
-                                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.16767436265945435" green="0.11433687061071396" blue="0.033651631325483322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="4Wp-rv-90e"/>
                                                                             <constraint firstAttribute="width" constant="45" id="4kG-YB-MEn"/>
@@ -189,7 +189,7 @@
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="15b-So-l1c" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                                         <rect key="frame" x="111.5" y="0.0" width="46" height="45"/>
-                                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.16767436265945435" green="0.11433687061071396" blue="0.033651631325483322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="45" id="HtQ-NP-p96"/>
                                                                             <constraint firstAttribute="height" constant="45" id="dnN-BY-mdD"/>
@@ -209,7 +209,7 @@
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PA6-JE-LQm" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                                         <rect key="frame" x="167.5" y="0.0" width="45.5" height="45"/>
-                                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.16767436265945435" green="0.11433687061071396" blue="0.033651631325483322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="45" id="bcW-CS-GvH"/>
                                                                             <constraint firstAttribute="height" constant="45" id="dT5-LZ-23b"/>
@@ -229,7 +229,7 @@
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0U-PS-rqu" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                                         <rect key="frame" x="223" y="0.0" width="46" height="45"/>
-                                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.16767436265945435" green="0.11433687061071396" blue="0.033651631325483322" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="H1W-xc-UrF"/>
                                                                             <constraint firstAttribute="width" constant="45" id="ini-F1-vrM"/>
@@ -254,7 +254,7 @@
                                                                 <subviews>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fgR-7e-GCC" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="0.0" width="46" height="45"/>
-                                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.18280431628227234" green="0.12611863017082214" blue="0.039968959987163544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="45" id="5Jf-wu-LiI"/>
                                                                             <constraint firstAttribute="height" constant="45" id="SlL-qt-Ak3"/>
@@ -274,7 +274,7 @@
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jmK-bu-uYZ" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                                         <rect key="frame" x="56" y="0.0" width="45.5" height="45"/>
-                                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.18280431628227234" green="0.12611863017082214" blue="0.039968959987163544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="hzZ-x3-KlB"/>
                                                                             <constraint firstAttribute="width" constant="45" id="zFm-QY-YwJ"/>
@@ -294,7 +294,7 @@
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1e-5C-VQB" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                                         <rect key="frame" x="111.5" y="0.0" width="46" height="45"/>
-                                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.18280431628227234" green="0.12611863017082214" blue="0.039968959987163544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="45" id="L10-wQ-YZE"/>
                                                                             <constraint firstAttribute="height" constant="45" id="kVH-si-Jcz"/>
@@ -314,7 +314,7 @@
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d1d-tL-77E" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                                         <rect key="frame" x="167.5" y="0.0" width="45.5" height="45"/>
-                                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.18280431628227234" green="0.12611863017082214" blue="0.039968959987163544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="45" id="UTH-ff-41M"/>
                                                                             <constraint firstAttribute="height" constant="45" id="waH-mA-cR6"/>
@@ -334,7 +334,7 @@
                                                                     </button>
                                                                     <button opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZU-N9-hyH" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                                         <rect key="frame" x="223" y="0.0" width="46" height="45"/>
-                                                                        <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <color key="backgroundColor" red="0.18280431628227234" green="0.12611863017082214" blue="0.039968959987163544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="height" constant="45" id="4FI-Qr-Ao3"/>
                                                                             <constraint firstAttribute="width" constant="45" id="KFI-vw-JEW"/>
@@ -363,7 +363,7 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3qy-xQ-ior" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="46" height="35"/>
-                                                        <color key="backgroundColor" red="0.29803922770000002" green="0.29803922770000002" blue="0.29803922770000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="backgroundColor" red="0.18379539251327515" green="0.13326048851013184" blue="0.047631226480007172" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="46" id="C4O-fV-iCs"/>
                                                             <constraint firstAttribute="height" constant="35" id="aE0-Ra-u6x"/>
@@ -402,7 +402,7 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.17254901960784313" green="0.19215686274509802" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.47911256551742554" green="0.36465835571289062" blue="0.17173945903778076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="t5e-Ki-Psa" secondAttribute="trailing" constant="15" id="2PF-U2-Ae8"/>
                                     <constraint firstItem="t5e-Ki-Psa" firstAttribute="top" secondItem="7iw-Pp-t1F" secondAttribute="top" constant="8" id="5vR-gN-pH8"/>
@@ -441,7 +441,7 @@
                                                 </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.023788729682564735" green="0.17306500673294067" blue="0.41441088914871216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="8"/>
@@ -466,13 +466,13 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 2345,00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sad-X0-V4e">
                                                 <rect key="frame" x="0.0" y="0.0" width="135" height="34.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
-                                                <color key="textColor" red="0.91499036550521851" green="0.92142826318740845" blue="0.92491930723190308" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="textColor" red="0.20869255065917969" green="0.14224141836166382" blue="0.044428117573261261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saldo atual" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qFs-Pu-rBZ">
                                                 <rect key="frame" x="30" y="36.5" width="75" height="20.5"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="15"/>
-                                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="textColor" red="0.20869255065917969" green="0.14224141836166382" blue="0.044428117573261261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -492,12 +492,12 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.20869255065917969" green="0.14224141836166382" blue="0.044428117573261261" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.21749100675789679" green="0.2433052871949975" blue="0.2973343157768249" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.79354953765869141" green="0.63784748315811157" blue="0.37573811411857605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JNu-lc-NSk" firstAttribute="centerY" secondItem="5qv-kA-nHo" secondAttribute="centerY" id="16y-Qv-EvH"/>
                             <constraint firstItem="mD4-N4-T7I" firstAttribute="top" secondItem="k2s-eB-lrI" secondAttribute="bottom" constant="18" id="4Pa-SW-Qie"/>
@@ -540,12 +540,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1231.2" y="60.719640179910051"/>
+            <point key="canvasLocation" x="1234" y="61"/>
         </scene>
         <!--DecribeExpenseVC-->
         <scene sceneID="EFX-Vs-lw9">
             <objects>
-                <viewController id="Cgu-Nw-Dpk" userLabel="DecribeExpenseVC" customClass="DescribeExpenseVC" customModule="Meus_Gastos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Despesa" id="Cgu-Nw-Dpk" userLabel="DecribeExpenseVC" customClass="DescribeExpenseVC" customModule="Meus_Gastos" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rL6-Ww-cec"/>
                         <viewControllerLayoutGuide type="bottom" id="RgC-vc-ODP"/>
@@ -561,7 +561,7 @@
                                         <rect key="frame" x="8" y="14" width="88" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="25"/>
-                                        <color key="textColor" red="0.99276739358901978" green="0.99591666460037231" blue="0.99586433172225952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -576,7 +576,7 @@
                                         <real key="value" value="1"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" red="0.9999235272" green="1" blue="0.99988299609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="value" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -606,10 +606,10 @@
                                         <rect key="frame" x="40" y="0.0" width="303" height="81"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2mw-LJ-tzA">
-                                                <rect key="frame" x="0.0" y="0.0" width="303" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="25"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aiK-XR-crh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="qSQ-hv-P4b"/>
@@ -624,8 +624,8 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHI-40-5D4">
-                                                        <rect key="frame" x="0.0" y="30" width="303" height="1"/>
-                                                        <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="0.0" y="24" width="303" height="1"/>
+                                                        <color key="backgroundColor" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="OrP-dV-LaO"/>
                                                         </constraints>
@@ -633,10 +633,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-xw-UjI">
-                                                <rect key="frame" x="0.0" y="56" width="303" height="25"/>
+                                                <rect key="frame" x="0.0" y="50" width="303" height="31"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Categoria" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsw-vu-fTz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="D48-kl-tdy"/>
@@ -651,8 +651,8 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-nH-PjE">
-                                                        <rect key="frame" x="0.0" y="24" width="303" height="1"/>
-                                                        <color key="backgroundColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <rect key="frame" x="0.0" y="30" width="303" height="1"/>
+                                                        <color key="backgroundColor" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="khI-ur-PKP"/>
                                                         </constraints>
@@ -679,7 +679,7 @@
                                                 <rect key="frame" x="286" y="2" width="51" height="31"/>
                                             </switch>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="RGQ-qE-Gwg" secondAttribute="bottom" constant="2" id="6Ii-1o-57z"/>
                                             <constraint firstItem="RGQ-qE-Gwg" firstAttribute="top" secondItem="Jzn-td-abp" secondAttribute="top" constant="2" id="GeX-uc-5cj"/>
@@ -699,7 +699,7 @@
                                         <subviews>
                                             <button opaque="NO" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQA-tr-NWQ" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="343" height="40"/>
-                                                <color key="backgroundColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.023788729682564735" green="0.17306500673294067" blue="0.41441088914871216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
                                                 <state key="normal" title="Finalizar">
                                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -721,7 +721,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.21598401665687561" green="0.24205887317657471" blue="0.29760420322418213" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.792156862745098" green="0.63921568627450975" blue="0.37647058823529411" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9MY-et-6jj" firstAttribute="trailing" secondItem="Cek-Ux-tWF" secondAttribute="trailingMargin" id="2KT-z1-xx3"/>
                             <constraint firstItem="Gee-iu-brt" firstAttribute="top" secondItem="rL6-Ww-cec" secondAttribute="bottom" constant="14" id="5YE-L9-b2N"/>
@@ -749,11 +749,11 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m0L-aM-jbY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hsy-bE-OIJ">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="Hsy-bE-OIJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" red="0.99992352724075317" green="1" blue="0.99988299608230591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="barTintColor" red="0.29803921568627451" green="0.85098039215686272" blue="0.39215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.024184780195355415" green="0.17241865396499634" blue="0.41061699390411377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>

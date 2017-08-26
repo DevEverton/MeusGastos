@@ -36,13 +36,12 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         numbersView.alpha = 0
         
         
-      
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         numbersViewLabel.text = "0,00"
-        Variables.typedValue = ""
+        Variables.typedValue = "00"
+    
 
     }
     
@@ -138,12 +137,18 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     
     @IBAction func insertNumber(_ sender: Any) {
         
-        Variables.typedValue += (sender as AnyObject).title(for: .normal)!
-        numbersViewLabel.text = Variables.typedValue
         
-      //myExpenses.valueOnTheScreen += (sender as AnyObject).title(for: .normal)!
-      // myExpenses.valueOnTheScreen.remove(at: myExpenses.valueOnTheScreen.startIndex)
-      // numbersViewLabel.text =  myExpenses.valueOnTheScreen
+        Variables.typedValue += (sender as AnyObject).title(for: .normal)!
+        Variables.typedValue.insert(",", at: Variables.typedValue.index(Variables.typedValue.endIndex, offsetBy: -2))
+        
+        numbersViewLabel.text = Variables.typedValue
+        var tempStr = Variables.typedValue.replacingOccurrences(of: ",", with: "", options: .regularExpression)
+       
+        
+        if tempStr.hasPrefix("0") {
+            tempStr.remove(at: tempStr.startIndex)
+        }
+         Variables.typedValue = tempStr
         
 
         
