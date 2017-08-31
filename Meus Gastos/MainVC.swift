@@ -32,8 +32,9 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         incomeButtonLocation = incomeButton.center
         expenseButtonLocation = expenseButton.center
         
-        //tableView.layer.cornerRadius = 8
+        tableView.layer.cornerRadius = 8
         numbersView.alpha = 0
+        
         
         
     }
@@ -113,6 +114,8 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         }
     }
     
+
+    
     @IBAction func expenseButtonAct(_ sender: Any) {
         
         enterValueButtonOutlet.backgroundColor = UIColor(red:1.00, green:0.23, blue:0.19, alpha:1.0)
@@ -126,31 +129,43 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         UIView.animate(withDuration: 0.5, animations: {
             self.numbersView.alpha = 1
         })
-
+        
+        
     }
     
-    func withCommas(number: Int) -> String {
+    func formatted( number: String) -> String {
         let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.decimal
-        return numberFormatter.string(from: NSNumber(value:number))!
+        numberFormatter.numberStyle = NumberFormatter.Style.currency
+        if let number2 = Double(number){
+        return numberFormatter.string(from: NSNumber(value: number2))!
+        }
+        return number
     }
     
     @IBAction func insertNumber(_ sender: Any) {
         
-        
+
         Variables.typedValue += (sender as AnyObject).title(for: .normal)!
         Variables.typedValue.insert(",", at: Variables.typedValue.index(Variables.typedValue.endIndex, offsetBy: -2))
-        
         numbersViewLabel.text = Variables.typedValue
+        
         var tempStr = Variables.typedValue.replacingOccurrences(of: ",", with: "", options: .regularExpression)
-       
         
         if tempStr.hasPrefix("0") {
+            
             tempStr.remove(at: tempStr.startIndex)
         }
-         Variables.typedValue = tempStr
-        
+        Variables.typedValue = tempStr
+ 
 
+    }
+    
+    @IBAction func eraseValueButton (_ sender: Any){
+        
+        var erasedNumber = String(Variables.typedValue.characters.dropLast(1))
+        erasedNumber.insert("0", at: erasedNumber.startIndex)
+        numbersViewLabel.text = erasedNumber
+        Variables.typedValue = erasedNumber
         
     }
     

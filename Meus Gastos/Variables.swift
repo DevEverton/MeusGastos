@@ -11,5 +11,6 @@ import Foundation
 class Variables {
     
     static var typedValue = String()
+   
     
 }

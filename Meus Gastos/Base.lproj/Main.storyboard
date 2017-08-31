@@ -120,20 +120,32 @@
                                                     <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4J-Bc-MMi" userLabel="insertNumberView" customClass="RoundedView" customModule="Meus_Gastos" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="269" height="35"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0,00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PrU-Mi-mky">
-                                                                <rect key="frame" x="35" y="0.5" width="226" height="34.5"/>
-                                                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
-                                                                <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="88I-9u-mhk">
+                                                                <rect key="frame" x="0.0" y="0.0" width="258" height="34.5"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rkw-uQ-9JF">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="34.5"/>
+                                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
+                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="PrU-Mi-mky">
+                                                                        <rect key="frame" x="32" y="0.0" width="226" height="34.5"/>
+                                                                        <constraints>
+                                                                            <constraint firstAttribute="width" constant="226" id="vyC-rL-hcG"/>
+                                                                        </constraints>
+                                                                        <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="25"/>
+                                                                        <color key="textColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                </subviews>
+                                                            </stackView>
                                                         </subviews>
                                                         <color key="backgroundColor" red="0.22869324684143066" green="0.16496789455413818" blue="0.061029009521007538" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="bottom" secondItem="PrU-Mi-mky" secondAttribute="bottom" id="RwG-RW-M4e"/>
                                                             <constraint firstAttribute="height" constant="35" id="fBa-1T-72x"/>
                                                             <constraint firstAttribute="width" constant="265" id="iSL-q4-ObQ"/>
-                                                            <constraint firstAttribute="trailing" secondItem="PrU-Mi-mky" secondAttribute="trailing" constant="8" id="oS2-3C-yGY"/>
-                                                            <constraint firstItem="PrU-Mi-mky" firstAttribute="leading" secondItem="q4J-Bc-MMi" secondAttribute="leading" constant="35" id="qGM-oe-f2r"/>
                                                         </constraints>
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -376,6 +388,9 @@
                                                                 <real key="value" value="10"/>
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="eraseValueButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCD-qv-Kh8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lFD-Hz-GcS" customClass="RoundedButton" customModule="Meus_Gastos" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="45" width="46" height="100"/>
@@ -540,7 +555,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1234" y="61"/>
+            <point key="canvasLocation" x="1232.8" y="60.719640179910051"/>
         </scene>
         <!--DecribeExpenseVC-->
         <scene sceneID="EFX-Vs-lw9">
@@ -606,10 +621,10 @@
                                         <rect key="frame" x="40" y="0.0" width="303" height="81"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2mw-LJ-tzA">
-                                                <rect key="frame" x="0.0" y="0.0" width="303" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="31"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aiK-XR-crh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="qSQ-hv-P4b"/>
@@ -624,7 +639,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHI-40-5D4">
-                                                        <rect key="frame" x="0.0" y="24" width="303" height="1"/>
+                                                        <rect key="frame" x="0.0" y="30" width="303" height="1"/>
                                                         <color key="backgroundColor" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="OrP-dV-LaO"/>
@@ -633,10 +648,10 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-xw-UjI">
-                                                <rect key="frame" x="0.0" y="50" width="303" height="31"/>
+                                                <rect key="frame" x="0.0" y="56" width="303" height="25"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Categoria" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsw-vu-fTz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="D48-kl-tdy"/>
@@ -651,7 +666,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-nH-PjE">
-                                                        <rect key="frame" x="0.0" y="30" width="303" height="1"/>
+                                                        <rect key="frame" x="0.0" y="24" width="303" height="1"/>
                                                         <color key="backgroundColor" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="khI-ur-PKP"/>
