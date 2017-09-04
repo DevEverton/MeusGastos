@@ -35,15 +35,12 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         tableView.layer.cornerRadius = 8
         numbersView.alpha = 0
         
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
         numbersViewLabel.text = "0,00"
-        Variables.typedValue = "00"
+        Variables.typedValue = "000"
     
-
     }
     
     override func viewDidLayoutSubviews() {
@@ -133,39 +130,46 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         
     }
     
-    func formatted( number: String) -> String {
+    func formatToDecimal( number: String) -> String {
         let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.currency
+        numberFormatter.numberStyle = NumberFormatter.Style.decimal
         if let number2 = Double(number){
         return numberFormatter.string(from: NSNumber(value: number2))!
         }
         return number
     }
     
+    func formatToShow (formattedDecimal: String) -> String{
+        let format1 = formattedDecimal.replacingOccurrences(of: ".", with: "")
+        var format2 = format1.replacingOccurrences(of: ",", with: ".")
+        format2.insert(",", at: format2.index(format2.endIndex, offsetBy: -2))
+        return format2
+    }
+    
+    
+    
     @IBAction func insertNumber(_ sender: Any) {
         
-
         Variables.typedValue += (sender as AnyObject).title(for: .normal)!
-        Variables.typedValue.insert(",", at: Variables.typedValue.index(Variables.typedValue.endIndex, offsetBy: -2))
-        numbersViewLabel.text = Variables.typedValue
-        
-        var tempStr = Variables.typedValue.replacingOccurrences(of: ",", with: "", options: .regularExpression)
-        
-        if tempStr.hasPrefix("0") {
-            
-            tempStr.remove(at: tempStr.startIndex)
+        if Variables.typedValue.hasPrefix("0"){
+            Variables.typedValue.remove(at: Variables.typedValue.startIndex)
         }
-        Variables.typedValue = tempStr
- 
+        Variables.typedValue.insert(".", at: Variables.typedValue.index(Variables.typedValue.endIndex, offsetBy: -2))
+
+        let tempStr = formatToDecimal(number: Variables.typedValue)
+        let tempStr2 = formatToShow(formattedDecimal: tempStr)
+        numbersViewLabel.text = tempStr2
+        let tempStr3 = tempStr2.replacingOccurrences(of: "[,.]", with: "",options: .regularExpression)
+        Variables.typedValue = tempStr3
+        
+        
 
     }
     
     @IBAction func eraseValueButton (_ sender: Any){
         
-        var erasedNumber = String(Variables.typedValue.characters.dropLast(1))
-        erasedNumber.insert("0", at: erasedNumber.startIndex)
-        numbersViewLabel.text = erasedNumber
-        Variables.typedValue = erasedNumber
+  //      let erasedNumber = String(Variables.typedValue.characters.dropLast(1))
+        
         
     }
     
