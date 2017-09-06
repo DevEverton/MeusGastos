@@ -132,7 +132,8 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     
     func formatToDecimal( number: String) -> String {
         let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.decimal
+        numberFormatter.numberStyle = NumberFormatter.Style.currency
+        numberFormatter.currencySymbol = ""
         if let number2 = Double(number){
         return numberFormatter.string(from: NSNumber(value: number2))!
         }
@@ -150,25 +151,34 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     
     @IBAction func insertNumber(_ sender: Any) {
         
+        
         Variables.typedValue += (sender as AnyObject).title(for: .normal)!
         if Variables.typedValue.hasPrefix("0"){
             Variables.typedValue.remove(at: Variables.typedValue.startIndex)
         }
         Variables.typedValue.insert(".", at: Variables.typedValue.index(Variables.typedValue.endIndex, offsetBy: -2))
-
         let tempStr = formatToDecimal(number: Variables.typedValue)
         let tempStr2 = formatToShow(formattedDecimal: tempStr)
         numbersViewLabel.text = tempStr2
         let tempStr3 = tempStr2.replacingOccurrences(of: "[,.]", with: "",options: .regularExpression)
         Variables.typedValue = tempStr3
         
-        
 
     }
     
     @IBAction func eraseValueButton (_ sender: Any){
         
-  //      let erasedNumber = String(Variables.typedValue.characters.dropLast(1))
+        if Variables.typedValue.characters.count < 4 {
+            Variables.typedValue.insert("0", at: Variables.typedValue.startIndex)
+        }
+        var erasedNumber = String(Variables.typedValue.characters.dropLast(1))
+        erasedNumber.insert(".", at: erasedNumber.index(erasedNumber.endIndex, offsetBy: -2))
+        let tempStr = formatToDecimal(number: erasedNumber)
+        let tempStr2 = formatToShow(formattedDecimal: tempStr)
+        numbersViewLabel.text = tempStr2
+        let tempStr3 = tempStr2.replacingOccurrences(of: "[,.]", with: "",options: .regularExpression)
+        Variables.typedValue = tempStr3
+        
         
         
     }
