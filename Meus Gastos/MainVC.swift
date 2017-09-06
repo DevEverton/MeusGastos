@@ -40,6 +40,7 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     override func viewDidAppear(_ animated: Bool) {
         numbersViewLabel.text = "0,00"
         Variables.typedValue = "000"
+        
     
     }
     
@@ -130,25 +131,7 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         
     }
     
-    func formatToDecimal( number: String) -> String {
-        let numberFormatter = NumberFormatter()
-        numberFormatter.numberStyle = NumberFormatter.Style.currency
-        numberFormatter.currencySymbol = ""
-        if let number2 = Double(number){
-        return numberFormatter.string(from: NSNumber(value: number2))!
-        }
-        return number
-    }
-    
-    func formatToShow (formattedDecimal: String) -> String{
-        let format1 = formattedDecimal.replacingOccurrences(of: ".", with: "")
-        var format2 = format1.replacingOccurrences(of: ",", with: ".")
-        format2.insert(",", at: format2.index(format2.endIndex, offsetBy: -2))
-        return format2
-    }
-    
-    
-    
+
     @IBAction func insertNumber(_ sender: Any) {
         
         
@@ -157,7 +140,7 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
             Variables.typedValue.remove(at: Variables.typedValue.startIndex)
         }
         Variables.typedValue.insert(".", at: Variables.typedValue.index(Variables.typedValue.endIndex, offsetBy: -2))
-        let tempStr = formatToDecimal(number: Variables.typedValue)
+        let tempStr = formatToCurrency(number: Variables.typedValue)
         let tempStr2 = formatToShow(formattedDecimal: tempStr)
         numbersViewLabel.text = tempStr2
         let tempStr3 = tempStr2.replacingOccurrences(of: "[,.]", with: "",options: .regularExpression)
@@ -173,7 +156,7 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         }
         var erasedNumber = String(Variables.typedValue.characters.dropLast(1))
         erasedNumber.insert(".", at: erasedNumber.index(erasedNumber.endIndex, offsetBy: -2))
-        let tempStr = formatToDecimal(number: erasedNumber)
+        let tempStr = formatToCurrency(number: erasedNumber)
         let tempStr2 = formatToShow(formattedDecimal: tempStr)
         numbersViewLabel.text = tempStr2
         let tempStr3 = tempStr2.replacingOccurrences(of: "[,.]", with: "",options: .regularExpression)

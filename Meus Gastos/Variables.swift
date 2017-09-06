@@ -11,6 +11,7 @@ import Foundation
 class Variables {
     
     static var typedValue = String()
+    static var typedValueDbl = Double()
    
     
 }

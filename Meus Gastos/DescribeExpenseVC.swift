@@ -12,6 +12,9 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
     
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var categoryTextFiled: UITextField!
+    @IBOutlet weak var expenseLabel: UILabel!
+    @IBOutlet weak var clipBoardicon: UIImageView!
+    @IBOutlet weak var tagIcon: UIImageView!
     
     let categoryPicker = UIPickerView()
 
@@ -22,8 +25,28 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         categoryPicker.delegate = self
         categoryPicker.dataSource = self
         categoryTextFiled.inputView = categoryPicker
-        categoryPicker.backgroundColor = UIColor(red:0.21, green:0.14, blue:0.04, alpha:1.0)
+        categoryPicker.backgroundColor = UIColor(red:0.87, green:0.81, blue:0.70, alpha:1.0)
+        expenseLabel.text = formatExpense(expense: Variables.typedValue)
+        Variables.typedValueDbl = castToDouble(value: Variables.typedValue)
+        changeIconColor(icon: clipBoardicon)
+        changeIconColor(icon: tagIcon)
         
+
+    }
+    
+    func changeIconColor(icon: UIImageView){
+        
+        icon.image = icon.image!.withRenderingMode(.alwaysTemplate)
+        icon.tintColor = UIColor(red:0.27, green:0.19, blue:0.04, alpha:1.0)
+        
+    }
+    
+    func formatExpense(expense: String) -> String {
+        var expense = expense
+        expense.insert(".", at: expense.index(expense.endIndex, offsetBy: -2))
+        let tempStr = formatToCurrency(number: expense)
+        let tempStr2 = formatToShow(formattedDecimal: tempStr)
+        return tempStr2
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
