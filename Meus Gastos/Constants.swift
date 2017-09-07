@@ -16,4 +16,6 @@ struct Constants {
     
     static let pickerCategoryArray = ["Alimentação", "Lazer", "Transporte", "Moradia", "Saúde", "Educação", "Vestuário", "Outros"]
     
+    static let pickerCategoryIncomeArray = ["Salário", "Renda extra", "Retorno de investimento"]
+    
 }

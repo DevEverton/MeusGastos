@@ -21,3 +21,11 @@ enum Categories {
     
 
 }
+
+enum CategoriesIncome {
+    
+    case Salário
+    case RendaExtra
+    case RetornoInvestimentos
+
+}

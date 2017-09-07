@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5019DEC91F61E2BB00C96E4E /* DescribeIncomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019DEC81F61E2BB00C96E4E /* DescribeIncomeVC.swift */; };
+		5019DECB1F61EB8700C96E4E /* Income.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5019DECA1F61EB8700C96E4E /* Income.swift */; };
 		501D25DF1F2FA636007397B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501D25DE1F2FA636007397B5 /* AppDelegate.swift */; };
 		501D25E41F2FA636007397B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 501D25E21F2FA636007397B5 /* Main.storyboard */; };
 		501D25E71F2FA636007397B5 /* Meus_Gastos.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 501D25E51F2FA636007397B5 /* Meus_Gastos.xcdatamodeld */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5019DEC81F61E2BB00C96E4E /* DescribeIncomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescribeIncomeVC.swift; sourceTree = "<group>"; };
+		5019DECA1F61EB8700C96E4E /* Income.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Income.swift; sourceTree = "<group>"; };
 		501D25DB1F2FA636007397B5 /* Meus Gastos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meus Gastos.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		501D25DE1F2FA636007397B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		501D25E31F2FA636007397B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 				50B1EC6C1F423E2500C73EED /* MonthExpenses.swift */,
 				50B222FC1F460855003CF643 /* Variables.swift */,
 				508424FF1F606481002FB237 /* Functions.swift */,
+				5019DECA1F61EB8700C96E4E /* Income.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -117,6 +122,7 @@
 				501D25F61F2FA71D007397B5 /* MainVC.swift */,
 				501D26021F3521DB007397B5 /* CategoryCollectionViewCell.swift */,
 				50AD78F41F3E58D800E85A87 /* DescribeExpenseVC.swift */,
+				5019DEC81F61E2BB00C96E4E /* DescribeIncomeVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -194,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5019DEC91F61E2BB00C96E4E /* DescribeIncomeVC.swift in Sources */,
 				50AD78F51F3E58D800E85A87 /* DescribeExpenseVC.swift in Sources */,
 				50B1EC6D1F423E2500C73EED /* MonthExpenses.swift in Sources */,
 				501D25E71F2FA636007397B5 /* Meus_Gastos.xcdatamodeld in Sources */,
@@ -206,6 +213,7 @@
 				501D25DF1F2FA636007397B5 /* AppDelegate.swift in Sources */,
 				501D25FD1F2FB516007397B5 /* RoundedView.swift in Sources */,
 				501D26031F3521DB007397B5 /* CategoryCollectionViewCell.swift in Sources */,
+				5019DECB1F61EB8700C96E4E /* Income.swift in Sources */,
 				501D25F91F2FA77F007397B5 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

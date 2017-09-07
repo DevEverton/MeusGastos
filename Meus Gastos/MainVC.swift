@@ -109,6 +109,8 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         
         if enterValueButtonOutlet.backgroundColor == UIColor(red:1.00, green:0.23, blue:0.19, alpha:1.0){
         performSegue(withIdentifier: "describeExpense", sender: (Any).self)
+        }else{
+            performSegue(withIdentifier: "describeIncome", sender: (Any).self)
         }
     }
     
@@ -141,10 +143,9 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         }
         Variables.typedValue.insert(".", at: Variables.typedValue.index(Variables.typedValue.endIndex, offsetBy: -2))
         let tempStr = formatToCurrency(number: Variables.typedValue)
-        let tempStr2 = formatToShow(formattedDecimal: tempStr)
-        numbersViewLabel.text = tempStr2
-        let tempStr3 = tempStr2.replacingOccurrences(of: "[,.]", with: "",options: .regularExpression)
-        Variables.typedValue = tempStr3
+        numbersViewLabel.text = tempStr
+        let tempStr2 = tempStr.replacingOccurrences(of: "[,.]", with: "",options: .regularExpression)
+        Variables.typedValue = tempStr2
         
 
     }
@@ -157,12 +158,9 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         var erasedNumber = String(Variables.typedValue.characters.dropLast(1))
         erasedNumber.insert(".", at: erasedNumber.index(erasedNumber.endIndex, offsetBy: -2))
         let tempStr = formatToCurrency(number: erasedNumber)
-        let tempStr2 = formatToShow(formattedDecimal: tempStr)
-        numbersViewLabel.text = tempStr2
-        let tempStr3 = tempStr2.replacingOccurrences(of: "[,.]", with: "",options: .regularExpression)
-        Variables.typedValue = tempStr3
-        
-        
+        numbersViewLabel.text = tempStr
+        let tempStr2 = tempStr.replacingOccurrences(of: "[,.]", with: "",options: .regularExpression)
+        Variables.typedValue = tempStr2
         
     }
     

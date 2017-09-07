@@ -1,14 +1,14 @@
 //
-//  DescribeExpenseVC.swift
+//  DescribeIncomeVC.swift
 //  Meus Gastos
 //
-//  Created by Everton Carneiro on 11/08/17.
+//  Created by Everton Carneiro on 07/09/17.
 //  Copyright © 2017 Everton. All rights reserved.
 //
 
 import UIKit
 
-class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate{
+class DescribeIncomeVC: UIViewController, UITextFieldDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var descriptionTextField: UITextField!
     @IBOutlet weak var categoryTextFiled: UITextField!
@@ -16,8 +16,9 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
     @IBOutlet weak var clipBoardicon: UIImageView!
     @IBOutlet weak var tagIcon: UIImageView!
     
-    let categoryPicker = UIPickerView()
 
+    let categoryPicker = UIPickerView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,7 +33,7 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         changeIconColor(icon: clipBoardicon)
         changeIconColor(icon: tagIcon)
         
-
+        
     }
     
     func changeIconColor(icon: UIImageView){
@@ -46,7 +47,6 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         var expense = expense
         expense.insert(".", at: expense.index(expense.endIndex, offsetBy: -2))
         let tempStr = formatToCurrency(number: expense)
-        //let tempStr2 = formatToShow(formattedDecimal: tempStr)
         return tempStr
     }
     
@@ -64,17 +64,19 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return Constants.pickerCategoryArray.count
+        return Constants.pickerCategoryIncomeArray.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-       return Constants.pickerCategoryArray[row]
+        return Constants.pickerCategoryIncomeArray[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        categoryTextFiled.text = Constants.pickerCategoryArray[row]
+        categoryTextFiled.text = Constants.pickerCategoryIncomeArray[row]
         self.view.endEditing(false)
     }
-    
+
+
+
 
 }

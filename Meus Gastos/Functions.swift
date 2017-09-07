@@ -20,18 +20,29 @@ func formatToCurrency( number: String) -> String {
     return number
 }
 
-func formatToShow (formattedDecimal: String) -> String{
-    let format1 = formattedDecimal.replacingOccurrences(of: ".", with: "")
-    var format2 = format1.replacingOccurrences(of: ",", with: ".")
-    format2.insert(",", at: format2.index(format2.endIndex, offsetBy: -2))
-    return format2
-}
+//func formatToShow (formattedDecimal: String) -> String{
+//    let format1 = formattedDecimal.replacingOccurrences(of: ".", with: "")
+//    var format2 = format1.replacingOccurrences(of: ",", with: ".")
+//    format2.insert(",", at: format2.index(format2.endIndex, offsetBy: -2))
+//    return format2
+//}
 
 func castToDouble(value: String) -> Double{
     var value = value
     value.insert(".", at: value.index(value.endIndex, offsetBy: -2))
     let valueDbl = Double(value)!
     return valueDbl
+}
+
+extension UITextField{
+    @IBInspectable var placeHolderColor: UIColor? {
+        get {
+            return self.placeHolderColor
+        }
+        set {
+            self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSForegroundColorAttributeName: newValue!])
+        }
+    }
 }
 
 
