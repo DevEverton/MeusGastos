@@ -20,6 +20,8 @@ class Expenses {
     private var _valueEducação = Double()
     private var _valueVestuário = Double()
     private var _valueOutros = Double()
+    private var _description = String()
+    private var _category = String()
     
     
     var valueAlimentação: Double {
@@ -85,6 +87,23 @@ class Expenses {
             _valueOutros = newValue
         }
     }
+    
+    var description: String {
+        get{
+            return _description
+        }set{
+            _description = newValue
+        }
+    }
+    
+    var category: String {
+        get{
+            return _category
+        }set{
+            _category = newValue
+        }
+    }
+    
     
 
     

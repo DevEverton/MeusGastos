@@ -17,6 +17,8 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
     @IBOutlet weak var tagIcon: UIImageView!
     
     let categoryPicker = UIPickerView()
+    var myExpense = MonthExpenses()
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +48,6 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         var expense = expense
         expense.insert(".", at: expense.index(expense.endIndex, offsetBy: -2))
         let tempStr = formatToCurrency(number: expense)
-        //let tempStr2 = formatToShow(formattedDecimal: tempStr)
         return tempStr
     }
     
@@ -75,6 +76,51 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         categoryTextFiled.text = Constants.pickerCategoryArray[row]
         self.view.endEditing(false)
     }
+    
+    func getCategory(categoryStr: String) -> Categories{
+        
+        switch categoryStr {
+        case "Alimentação":
+            return .Alimentação
+        case "Lazer":
+            return .Lazer
+        case "Transporte":
+            return .Transporte
+        case "Moradia":
+            return .Moradia
+        case "Saúde":
+            return .Saúde
+        case "Educação":
+            return .Educação
+        case "Vestuário":
+            return .Vestuário
+        case "Outros":
+            return .Outros
+        default:
+            break
+       
+        }
+      
+       return .Outros
+        
+    }
+
+    @IBAction func doneButton(_ sender: Any) {
+        
+        if categoryTextFiled.text != nil && descriptionTextField.text != nil {
+            
+            let category = getCategory(categoryStr: categoryTextFiled.text!)
+            myExpense.addExpenseToTheMonth(NewExpense: Variables.typedValueDbl, category: category)
+            
+
+        }
+        
+        
+
+        
+    }
+    
+    
     
 
 }

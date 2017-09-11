@@ -93,12 +93,12 @@
 			children = (
 				501D25E51F2FA636007397B5 /* Meus_Gastos.xcdatamodeld */,
 				501D26041F38C6FB007397B5 /* Expenses.swift */,
+				5019DECA1F61EB8700C96E4E /* Income.swift */,
 				501D26061F3A23A3007397B5 /* Categories.swift */,
 				50B1EC6A1F423CAD00C73EED /* Constants.swift */,
 				50B1EC6C1F423E2500C73EED /* MonthExpenses.swift */,
 				50B222FC1F460855003CF643 /* Variables.swift */,
 				508424FF1F606481002FB237 /* Functions.swift */,
-				5019DECA1F61EB8700C96E4E /* Income.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";

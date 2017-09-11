@@ -8,24 +8,24 @@
 
 import Foundation
 
-enum Categories {
-    
-    case Alimentação
-    case Saúde
-    case Lazer
-    case Moradia
-    case Transporte
-    case Educação
-    case Vestuário
-    case Outros
+enum Categories: String {
+    case
+        Alimentação = "Alimentação",
+        Saúde = "Saúde",
+        Lazer = "Lazer",
+        Moradia = "Moradia",
+        Transporte = "Transporte",
+        Educação = "Educação",
+        Vestuário = "Vestuário",
+        Outros = "Outros"
     
 
 }
 
-enum CategoriesIncome {
-    
-    case Salário
-    case RendaExtra
-    case RetornoInvestimentos
+enum CategoriesIncome: String {
+    case
+        Salário = "Salário",
+        RendaExtra = "RendaExtra",
+        RetornoInvestimentos = "RetornoInvestimentos"
 
 }

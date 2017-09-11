@@ -623,10 +623,10 @@
                                         <rect key="frame" x="40" y="0.0" width="303" height="81"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="2mw-LJ-tzA">
-                                                <rect key="frame" x="0.0" y="0.0" width="303" height="31"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="25"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aiK-XR-crh">
-                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="qSQ-hv-P4b"/>
@@ -641,7 +641,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KHI-40-5D4">
-                                                        <rect key="frame" x="0.0" y="30" width="303" height="1"/>
+                                                        <rect key="frame" x="0.0" y="24" width="303" height="1"/>
                                                         <color key="backgroundColor" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="OrP-dV-LaO"/>
@@ -655,10 +655,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gvB-xw-UjI">
-                                                <rect key="frame" x="0.0" y="56" width="303" height="25"/>
+                                                <rect key="frame" x="0.0" y="50" width="303" height="31"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Categoria" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nsw-vu-fTz">
-                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="D48-kl-tdy"/>
@@ -673,7 +673,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pcn-nH-PjE">
-                                                        <rect key="frame" x="0.0" y="24" width="303" height="1"/>
+                                                        <rect key="frame" x="0.0" y="30" width="303" height="1"/>
                                                         <color key="backgroundColor" red="0.20784313725490194" green="0.14117647058823529" blue="0.043137254901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="khI-ur-PKP"/>
@@ -737,6 +737,9 @@
                                                         <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="doneButton:" destination="Cgu-Nw-Dpk" eventType="touchUpInside" id="sYE-BM-ndt"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -836,10 +839,10 @@
                                         <rect key="frame" x="40" y="0.0" width="303" height="81"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zby-4J-g5X">
-                                                <rect key="frame" x="0.0" y="0.0" width="303" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="303" height="31"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Tk1-lg-Nxm">
-                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="24"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="l0R-su-mLr"/>
@@ -854,7 +857,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tth-2y-4O5">
-                                                        <rect key="frame" x="0.0" y="24" width="303" height="1"/>
+                                                        <rect key="frame" x="0.0" y="30" width="303" height="1"/>
                                                         <color key="backgroundColor" red="0.20784313730000001" green="0.14117647059999999" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="qLl-hS-bhk"/>
@@ -868,10 +871,10 @@
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Tw8-pq-eOM">
-                                                <rect key="frame" x="0.0" y="50" width="303" height="31"/>
+                                                <rect key="frame" x="0.0" y="56" width="303" height="25"/>
                                                 <subviews>
                                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Categoria" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vWz-6t-xzN">
-                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="303" height="24"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="30" id="dnB-3d-eaK"/>
@@ -886,7 +889,7 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </textField>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PfS-Ot-rTr">
-                                                        <rect key="frame" x="0.0" y="30" width="303" height="1"/>
+                                                        <rect key="frame" x="0.0" y="24" width="303" height="1"/>
                                                         <color key="backgroundColor" red="0.20784313730000001" green="0.14117647059999999" blue="0.043137254899999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="1" id="qpO-BD-Mv0"/>

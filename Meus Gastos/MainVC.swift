@@ -23,9 +23,6 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     var incomeButtonLocation: CGPoint!
     var expenseButtonLocation: CGPoint!
   
-    var myExpenses = MonthExpenses()
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
