@@ -14,13 +14,13 @@ class CategoryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var categoryIcon: UIImageView!
     
-    @IBInspectable var cornerRadius: CGFloat = 0 {
-        didSet {
-            self.layer.cornerRadius = cornerRadius
-        }
-        
-    }
-    
+//    @IBInspectable var cornerRadius: CGFloat = 0 {
+//        didSet {
+//            self.layer.cornerRadius = cornerRadius
+//        }
+//        
+//    }
+//    
 
 
     

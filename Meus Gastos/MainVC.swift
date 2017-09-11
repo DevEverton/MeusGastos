@@ -29,7 +29,11 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         incomeButtonLocation = incomeButton.center
         expenseButtonLocation = expenseButton.center
         
-        tableView.layer.cornerRadius = 8
+        tableView.layer.cornerRadius = 5
+        tableView.layer.shadowOpacity = 0.8
+        tableView.layer.shadowRadius = 5.0
+        tableView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        tableView.layer.shadowColor = UIColor(red: 157/255, green: 157/255, blue: 157/255, alpha: 1.0).cgColor
         numbersView.alpha = 0
         
     }
@@ -81,7 +85,7 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     
     @IBAction func incomeButtonAct(_ sender: Any) {
         
-        enterValueButtonOutlet.backgroundColor = UIColor(red:0.30, green:0.85, blue:0.39, alpha:1.0)
+        enterValueButtonOutlet.backgroundColor = UIColor(red:0.00, green:0.48, blue:0.39, alpha:1.0)
         numbersViewBottomConstraint.constant = 10
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
@@ -104,7 +108,7 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
             self.numbersView.alpha = 0
         })
         
-        if enterValueButtonOutlet.backgroundColor == UIColor(red:1.00, green:0.23, blue:0.19, alpha:1.0){
+        if enterValueButtonOutlet.backgroundColor == UIColor(red:0.78, green:0.23, blue:0.19, alpha:1.0){
         performSegue(withIdentifier: "describeExpense", sender: (Any).self)
         }else{
             performSegue(withIdentifier: "describeIncome", sender: (Any).self)
@@ -115,7 +119,7 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     
     @IBAction func expenseButtonAct(_ sender: Any) {
         
-        enterValueButtonOutlet.backgroundColor = UIColor(red:1.00, green:0.23, blue:0.19, alpha:1.0)
+        enterValueButtonOutlet.backgroundColor = UIColor(red:0.78, green:0.23, blue:0.19, alpha:1.0)
         
         numbersViewBottomConstraint.constant = 10
         UIView.animate(withDuration: 0.3, animations: {

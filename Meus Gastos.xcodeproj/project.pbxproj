@@ -20,6 +20,7 @@
 		501D26031F3521DB007397B5 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501D26021F3521DB007397B5 /* CategoryCollectionViewCell.swift */; };
 		501D26051F38C6FB007397B5 /* Expenses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501D26041F38C6FB007397B5 /* Expenses.swift */; };
 		501D26071F3A23A3007397B5 /* Categories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 501D26061F3A23A3007397B5 /* Categories.swift */; };
+		5026BA2D1F6718B9007BEF5D /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5026BA2C1F6718B9007BEF5D /* MaterialView.swift */; };
 		508425001F606481002FB237 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 508424FF1F606481002FB237 /* Functions.swift */; };
 		50AD78F51F3E58D800E85A87 /* DescribeExpenseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50AD78F41F3E58D800E85A87 /* DescribeExpenseVC.swift */; };
 		50B1EC6B1F423CAD00C73EED /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B1EC6A1F423CAD00C73EED /* Constants.swift */; };
@@ -43,6 +44,7 @@
 		501D26021F3521DB007397B5 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		501D26041F38C6FB007397B5 /* Expenses.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expenses.swift; sourceTree = "<group>"; };
 		501D26061F3A23A3007397B5 /* Categories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Categories.swift; sourceTree = "<group>"; };
+		5026BA2C1F6718B9007BEF5D /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		508424FF1F606481002FB237 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		50AD78F41F3E58D800E85A87 /* DescribeExpenseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DescribeExpenseVC.swift; sourceTree = "<group>"; };
 		50B1EC6A1F423CAD00C73EED /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				501D25E21F2FA636007397B5 /* Main.storyboard */,
 				501D25F81F2FA77F007397B5 /* RoundedButton.swift */,
 				501D25FC1F2FB516007397B5 /* RoundedView.swift */,
+				5026BA2C1F6718B9007BEF5D /* MaterialView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				50B222FD1F460855003CF643 /* Variables.swift in Sources */,
 				501D26071F3A23A3007397B5 /* Categories.swift in Sources */,
 				508425001F606481002FB237 /* Functions.swift in Sources */,
+				5026BA2D1F6718B9007BEF5D /* MaterialView.swift in Sources */,
 				501D26051F38C6FB007397B5 /* Expenses.swift in Sources */,
 				501D25F71F2FA71D007397B5 /* MainVC.swift in Sources */,
 				50B1EC6B1F423CAD00C73EED /* Constants.swift in Sources */,

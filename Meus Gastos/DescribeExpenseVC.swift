@@ -27,7 +27,7 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         categoryPicker.delegate = self
         categoryPicker.dataSource = self
         categoryTextFiled.inputView = categoryPicker
-        categoryPicker.backgroundColor = UIColor(red:0.87, green:0.81, blue:0.70, alpha:1.0)
+        //categoryPicker.backgroundColor = UIColor(red:0.87, green:0.81, blue:0.70, alpha:1.0)
         
         expenseLabel.text = formatExpense(expense: Variables.typedValue)
         Variables.typedValueDbl = castToDouble(value: Variables.typedValue)
@@ -40,7 +40,7 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
     func changeIconColor(icon: UIImageView){
         
         icon.image = icon.image!.withRenderingMode(.alwaysTemplate)
-        icon.tintColor = UIColor(red:0.27, green:0.19, blue:0.04, alpha:1.0)
+        icon.tintColor = UIColor(red:0.40, green:0.40, blue:0.40, alpha:1.0)
         
     }
     
