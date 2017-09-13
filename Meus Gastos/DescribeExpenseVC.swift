@@ -17,7 +17,7 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
     @IBOutlet weak var tagIcon: UIImageView!
     
     let categoryPicker = UIPickerView()
-    var myExpense = MonthExpenses()
+   
 
 
     override func viewDidLoad() {
@@ -33,6 +33,8 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         Variables.typedValueDbl = castToDouble(value: Variables.typedValue)
         changeIconColor(icon: clipBoardicon)
         changeIconColor(icon: tagIcon)
+        Variables.isExpense = false
+
         
 
     }
@@ -85,7 +87,10 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
             
             let category = getExpenseCategory(categoryStr: categoryTextFiled.text!)
             myExpense.addExpenseToTheMonth(NewExpense: Variables.typedValueDbl, category: category)
-            print(myExpense.Sep.valueAlimentação)
+            Variables.expensesDict[Variables.typedValueDbl] = categoryTextFiled.text!
+            print(Variables.expensesDict)
+            Variables.isExpense = true
+            performSegue(withIdentifier: "backToMain", sender: (Any).self)
 
         }
         

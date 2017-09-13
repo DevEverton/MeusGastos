@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate {
+class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDelegate, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var mainButton: RoundedButton!
     @IBOutlet weak var incomeButton: RoundedButton!
@@ -22,6 +22,8 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     
     var incomeButtonLocation: CGPoint!
     var expenseButtonLocation: CGPoint!
+
+    
   
 
     override func viewDidLoad() {
@@ -35,6 +37,10 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         tableView.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         tableView.layer.shadowColor = UIColor(red: 157/255, green: 157/255, blue: 157/255, alpha: 1.0).cgColor
         numbersView.alpha = 0
+        
+        
+        
+        
         
     }
     
@@ -62,6 +68,44 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
         
         
         return collectCell
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Variables.expensesDict.count + Variables.incomeDict.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainCell
+        let value = formatExpense(expense: Variables.typedValue)
+        
+        if Variables.isExpense {
+            cell.arrowImg.image = #imageLiteral(resourceName: "arrowDown")
+            cell.valueLbl.text = "R$ " + value
+            
+        }else if Variables.isIncome{
+            cell.arrowImg.image = #imageLiteral(resourceName: "arrowUp")
+            cell.valueLbl.text = "R$ " + value
+        }
+        
+        return cell
+    }
+    
+    func formatExpense(expense: String) -> String {
+        var expense = expense
+        expense.insert(".", at: expense.index(expense.endIndex, offsetBy: -2))
+        let tempStr = formatToCurrency(number: expense)
+        return tempStr
+    }
+    
+    func changeIconColor(icon: UIImageView){
+        
+        icon.image = icon.image!.withRenderingMode(.alwaysTemplate)
+        icon.tintColor = UIColor(red:0.40, green:0.40, blue:0.40, alpha:1.0)
+        
     }
     
 

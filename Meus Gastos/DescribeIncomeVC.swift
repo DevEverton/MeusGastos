@@ -18,7 +18,7 @@ class DescribeIncomeVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     
 
     let categoryPicker = UIPickerView()
-    var myIncome = MonthIncome()
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()

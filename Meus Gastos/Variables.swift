@@ -12,6 +12,9 @@ class Variables {
     
     static var typedValue = String()
     static var typedValueDbl = Double()
-   
+    static var expensesDict = [Double:String]()
+    static var incomeDict = [Double:String]()
+    static var isExpense = false
+    static var isIncome = false
     
 }
