@@ -9,7 +9,7 @@
 import Foundation
 
 
-class MonthExpenses {
+struct MonthExpenses {
     
     var Jan = Expenses()
     var Feb = Expenses()
@@ -34,7 +34,7 @@ class MonthExpenses {
         
     }
     
-    func addExpenseToTheMonth(NewExpense: Double, category: Categories){
+    mutating func addExpenseToTheMonth(NewExpense: Double, category: Categories){
         
         let currentMonth = self.currentMonth()
         

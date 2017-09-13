@@ -18,6 +18,7 @@ class DescribeIncomeVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
     
 
     let categoryPicker = UIPickerView()
+    var myIncome = MonthIncome()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +76,20 @@ class DescribeIncomeVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         categoryTextFiled.text = Constants.pickerCategoryIncomeArray[row]
         self.view.endEditing(false)
     }
+    
+    @IBAction func doneButton(_ sender: Any) {
+        
+        
+        if categoryTextFiled.text != nil && descriptionTextField.text != nil {
+            
+            let category = getIncomeCategory(categoryStr: categoryTextFiled.text!)
+            myIncome.addIncomeToTheMonth(NewIncome: Variables.typedValueDbl, category: category)
+            print(myIncome.Sep.valueSalário)
+            
+        }
+        
+    }
+    
 
 
 

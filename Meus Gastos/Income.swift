@@ -9,7 +9,7 @@
 import Foundation
 
 
-class Income {
+struct Income {
     
     private var _valueSalário = Double()
     private var _valueRenEx = Double()
@@ -39,15 +39,15 @@ class Income {
         }
     }
     
-    func addExpense(newExpense: Double, category: CategoriesIncome){
+    mutating func addIncome(newIncome: Double, category: CategoriesIncome){
         
         switch category {
         case .Salário:
-            valueSalário += newExpense
+            valueSalário += newIncome
         case .RendaExtra:
-            valueRenEx += newExpense
+            valueRenEx += newIncome
         case .RetornoInvestimentos:
-            valueRetInv += newExpense
+            valueRetInv += newIncome
             
         }
 

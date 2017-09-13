@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Expenses {
+struct Expenses {
     
     
     private var _valueAlimentação = Double()
@@ -107,7 +107,7 @@ class Expenses {
     
 
     
-    func addExpense(newExpense: Double, category: Categories){
+    mutating func addExpense(newExpense: Double, category: Categories){
         
         switch category {
         case .Alimentação:

@@ -25,7 +25,7 @@ enum Categories: String {
 enum CategoriesIncome: String {
     case
         Salário = "Salário",
-        RendaExtra = "RendaExtra",
+        RendaExtra = "Renda Extra",
         RetornoInvestimentos = "RetornoInvestimentos"
 
 }

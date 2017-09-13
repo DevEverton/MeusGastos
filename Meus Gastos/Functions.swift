@@ -45,5 +45,52 @@ extension UITextField{
     }
 }
 
+func getExpenseCategory(categoryStr: String) -> Categories{
+    
+    switch categoryStr {
+    case "Alimentação":
+        return .Alimentação
+    case "Lazer":
+        return .Lazer
+    case "Transporte":
+        return .Transporte
+    case "Moradia":
+        return .Moradia
+    case "Saúde":
+        return .Saúde
+    case "Educação":
+        return .Educação
+    case "Vestuário":
+        return .Vestuário
+    case "Outros":
+        return .Outros
+    default:
+        break
+        
+    }
+    
+    return .Outros
+    
+}
+
+func getIncomeCategory(categoryStr: String) -> CategoriesIncome {
+    
+    switch categoryStr {
+    case "Salário":
+        return .Salário
+    case "Renda extra":
+        return .RendaExtra
+    case "Retorno de investimento":
+        return .RetornoInvestimentos
+    default:
+        break
+    }
+    
+    return .RendaExtra
+    
+    
+}
+
+
 
 

@@ -77,41 +77,15 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         self.view.endEditing(false)
     }
     
-    func getCategory(categoryStr: String) -> Categories{
-        
-        switch categoryStr {
-        case "Alimentação":
-            return .Alimentação
-        case "Lazer":
-            return .Lazer
-        case "Transporte":
-            return .Transporte
-        case "Moradia":
-            return .Moradia
-        case "Saúde":
-            return .Saúde
-        case "Educação":
-            return .Educação
-        case "Vestuário":
-            return .Vestuário
-        case "Outros":
-            return .Outros
-        default:
-            break
-       
-        }
-      
-       return .Outros
-        
-    }
+
 
     @IBAction func doneButton(_ sender: Any) {
         
         if categoryTextFiled.text != nil && descriptionTextField.text != nil {
             
-            let category = getCategory(categoryStr: categoryTextFiled.text!)
+            let category = getExpenseCategory(categoryStr: categoryTextFiled.text!)
             myExpense.addExpenseToTheMonth(NewExpense: Variables.typedValueDbl, category: category)
-            
+            print(myExpense.Sep.valueAlimentação)
 
         }
         
