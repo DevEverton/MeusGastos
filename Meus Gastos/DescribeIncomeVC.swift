@@ -31,8 +31,8 @@ class DescribeIncomeVC: UIViewController, UITextFieldDelegate, UIPickerViewDataS
         
         expenseLabel.text = formatExpense(expense: Variables.typedValue)
         Variables.typedValueDbl = castToDouble(value: Variables.typedValue)
-        changeIconColor(icon: clipBoardicon)
         changeIconColor(icon: tagIcon)
+        changeIconColor(icon: clipBoardicon)
         
         
     }

@@ -80,32 +80,27 @@ class MainVC: UIViewController , UICollectionViewDataSource, UICollectionViewDel
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MainCell
-        let value = formatExpense(expense: Variables.typedValue)
         
         if Variables.isExpense {
             cell.arrowImg.image = #imageLiteral(resourceName: "arrowDown")
-            cell.valueLbl.text = "R$ " + value
+            cell.valueLbl.text = Variables.expenseArray[indexPath.row]
+//            changeIconColor2(icon: cell.categoryImg)
+            cell.categoryImg.image = Variables.categImgArray[indexPath.row]
             
         }else if Variables.isIncome{
             cell.arrowImg.image = #imageLiteral(resourceName: "arrowUp")
-            cell.valueLbl.text = "R$ " + value
+            cell.valueLbl.text = Variables.incomeArray[indexPath.row]
         }
         
         return cell
     }
     
-    func formatExpense(expense: String) -> String {
-        var expense = expense
-        expense.insert(".", at: expense.index(expense.endIndex, offsetBy: -2))
-        let tempStr = formatToCurrency(number: expense)
-        return tempStr
-    }
+
     
-    func changeIconColor(icon: UIImageView){
+    func changeIconColor2(icon: UIImageView){
         
         icon.image = icon.image!.withRenderingMode(.alwaysTemplate)
-        icon.tintColor = UIColor(red:0.40, green:0.40, blue:0.40, alpha:1.0)
-        
+        icon.tintColor = UIColor(red:0.00, green:0.48, blue:0.39, alpha:1.0)
     }
     
 

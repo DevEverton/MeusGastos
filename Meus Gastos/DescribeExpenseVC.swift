@@ -29,10 +29,10 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         categoryTextFiled.inputView = categoryPicker
         //categoryPicker.backgroundColor = UIColor(red:0.87, green:0.81, blue:0.70, alpha:1.0)
         
-        expenseLabel.text = formatExpense(expense: Variables.typedValue)
+        expenseLabel.text = formatExpense$(expense: Variables.typedValue)
         Variables.typedValueDbl = castToDouble(value: Variables.typedValue)
-        changeIconColor(icon: clipBoardicon)
         changeIconColor(icon: tagIcon)
+        changeIconColor(icon: clipBoardicon)
         Variables.isExpense = false
 
         
@@ -79,6 +79,23 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
         self.view.endEditing(false)
     }
     
+    func formatToCurrency$( number: String) -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.currency
+        numberFormatter.currencySymbol = "R$ "
+        if let number2 = Double(number){
+            return numberFormatter.string(from: NSNumber(value: number2))!
+        }
+        return number
+    }
+    
+    func formatExpense$(expense: String) -> String {
+        var expense = expense
+        expense.insert(".", at: expense.index(expense.endIndex, offsetBy: -2))
+        let tempStr = formatToCurrency$(number: expense)
+        return tempStr
+    }
+    
 
 
     @IBAction func doneButton(_ sender: Any) {
@@ -88,7 +105,31 @@ class DescribeExpenseVC: UIViewController, UITextFieldDelegate, UIPickerViewData
             let category = getExpenseCategory(categoryStr: categoryTextFiled.text!)
             myExpense.addExpenseToTheMonth(NewExpense: Variables.typedValueDbl, category: category)
             Variables.expensesDict[Variables.typedValueDbl] = categoryTextFiled.text!
-            print(Variables.expensesDict)
+            let tableViewTypedValue = formatExpense$(expense: Variables.typedValue)
+            Variables.expenseArray.append(tableViewTypedValue)
+            
+            switch categoryTextFiled.text! {
+            case "Alimentação":
+                Variables.categImgArray.append(#imageLiteral(resourceName: "Alimentacao"))
+            case "Lazer":
+                Variables.categImgArray.append(#imageLiteral(resourceName: "Lazer"))
+            case "Transporte":
+                Variables.categImgArray.append(#imageLiteral(resourceName: "Transporte"))
+            case "Moradia":
+                Variables.categImgArray.append(#imageLiteral(resourceName: "Moradia"))
+            case "Saúde":
+                Variables.categImgArray.append(#imageLiteral(resourceName: "Saude"))
+            case "Educação":
+                Variables.categImgArray.append(#imageLiteral(resourceName: "Educacao"))
+            case "Vestuário":
+                Variables.categImgArray.append(#imageLiteral(resourceName: "Vestuario"))
+            case "Outros":
+                Variables.categImgArray.append(#imageLiteral(resourceName: "Outros"))
+            default:
+                break
+
+            }
+            
             Variables.isExpense = true
             performSegue(withIdentifier: "backToMain", sender: (Any).self)
 
